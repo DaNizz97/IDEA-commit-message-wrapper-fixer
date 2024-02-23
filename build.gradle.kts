@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "xyz.danizz"
-version = "1.1"
+version = "1.2"
 
 repositories {
     mavenCentral()
