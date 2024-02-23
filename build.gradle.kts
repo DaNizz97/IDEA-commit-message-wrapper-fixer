@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "xyz.danizz"
-version = "1.1"
+version = "1.2"
 
 repositories {
     mavenCentral()
@@ -23,7 +23,7 @@ idea {
 intellij {
     version.set("2023.1.5")
     type.set("IC") // Target IDE Platform
-
+    updateSinceUntilBuild = false
     plugins.set(listOf(/* Plugin Dependencies */))
 }
 
@@ -35,10 +35,6 @@ tasks {
     }
     withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
         kotlinOptions.jvmTarget = "17"
-    }
-
-    patchPluginXml {
-        sinceBuild.set("213")
     }
 
     signPlugin {
